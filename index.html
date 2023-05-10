@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habits</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Kanit:ital,wght@1,300;1,500&family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <header>
+        <img src="./assets/logo.svg" alt="Logomarca do aplicativo Habits">
+        <button><img src="./assets/plus.svg" alt="Icon sinal de mais roxo"> 
+            <div>
+                Registrar o meu dia
+            </div>
+        </button> 
+    </header>
+
+    <form id="form-habits">
+        <div class="habits">
+            <div class="habit" data-name="run">🏃</div>
+            <div class="habit" data-name="water">💧</div>
+            <div class="habit" data-name="food">🍎</div>
+            <div class="habit" data-name="journal">🗞️</div>
+            <div class="habit" data-name="takePills">💊</div>
+        </div>
+        <div class="days"><!--Aqui são criados inputs pela biblioteca nlwSetup
+            <div class="day"> cria uma div com a class day para estilizar, essa div foi criada anteriormente quando não usávamos
+                a biblioteca para olharmos como a estilização foi sendo feita e depois essa div foi excluída porque a própria biblioteca
+                a cria
+                <div>01/01</div> Dia do checklist
+                <input type="checkbox" name="run" value="01/01"/> input checkbox com name run que é usado no javascript para selecionar os dias que foi realizado
+                <input type="checkbox" name="water" value="01/01"/> ''''
+                <input type="checkbox" name="food" value="01/01"/> ''''
+            </div>
+        -->
+        </div>
+    </form>
+    
+    <script src="https://cdn.jsdelivr.net/gh/maykbrito/libs/NLWSetup/source/NLWSetup.js"></script> <!--Biblioteca nlwSetup-->
+    <script src="./script.js"></script> <!--script.js-->
+  </body>
+</html>

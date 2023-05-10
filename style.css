@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+body {
+    background-color: #1E1E1E;
+    color: white;
+  
+    height: 100vh;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /*Separando os itens por espaço entre eles*/
+    padding: 48px;
+    position: fixed; /*Definindo a posição fixa do header*/
+    width: 100%;
+    background-color: #1E1E1E; /*Colocando a mesma cor do body na caixa do header*/
+}
+
+button{
+    padding: 16px 24px; /*Preenchimentos internos, top e bottom 16px, laterais 24px*/
+    border-radius: 8px; /*Arredondando a borda*/
+    border: 1px solid #8b5cf6;
+    background-color: transparent; /*Retirando a cor padrão do botão*/
+    color: white;
+    display: flex;
+    gap: 12px; /* Espaçamento entre elementos quando o display é flex*/
+    align-items: center; /*Centralizando os itens ao centro*/
+    font-family: 'Inter';
+    font-weight: 600; /*Força da fonte, grossura do traço*/
+    line-height: 125%; /*Altura da linha*/
+    font-size: 16px;
+}
+
+#form-habits{
+    display: flex; /*Colocando os itens do form um ao lado do outro, div habits e days*/
+    padding: 182px /*Colocando a altura total do header para poder não ficar sobreposto pelo header*/ 48px 48px; /*Colocando prenchimento interno nas laterais e embaixo de 48px*/
+    width: fit-content; /*Encaixando o conteúdo todo na largura*/
+}
+
+.habits{
+    margin-top: 60px;
+    display: flex; /*Colocando os elementos um ao lado do outro*/
+    flex-direction: column;/*Tornando o flex como columa, um abaixo do outro*/
+    gap:24px;
+
+}
+
+.habit{
+    width: 64px;
+    height: 64px;
+    font-size: 32px;
+    display: flex; /*Precisa do display flex para usar o alig-itens*/
+    align-items: center; /*Alinhando os itens ao centro na vertical*/
+    justify-content: center; /*Alinhando os itens ao centro na horizontal*/
+}
+
+.days{
+    display: flex; /*Colocando os dias um ao lado do outro*/
+    margin-left: 32px;
+    gap: 48px; /*COmo o display é flex, da pra colocar espaço entre as caixas do days que seriam os dias de 48px*/
+}
+
+.day{
+    display: flex; /*Colocando os dias um ao lado do outro*/
+    flex-direction: column; /*Mudando a direção do flex para coluna*/
+    gap: 24px; /*Espaço entre os objetos de 24px*/
+}
+
+.day div{
+    margin-bottom: 8px;
+    font-family: 'Roboto Mono';
+
+    font-size: 20px;
+    line-height: 125%;
+    text-align: center;
+    color: #A1A1AA;
+}
+
+input {
+    appearance: none; /*Tem que retirar a aparência padrão do input*/
+    -webkit-appearance: none; /*Prefixo webkit, alguns navegadores precisam como o safari, para reconhecer o apperence none*/
+    width: 64px;
+    height: 64px;
+    border: 2px solid #A78BFA;
+    border-radius: 8px;
+    background: #18181B;
+}
+
+input:checked{   /*pseudo-selector*/
+    background: #8B5CF6;
+    border: 2px solid #A78BFA;
+    
+}
+
+/*Resposividade*/
+@media (max-width: 570px){ /*Se meu dispositivo tiver de 0 a 570px aplicar essas formatações*/
+    button div{
+        display: none; /*Quando a dela for menor de 570 a div, a frase vai sumir*/
+    }
+}
